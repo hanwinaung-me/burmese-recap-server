@@ -103,9 +103,16 @@ def list_projects():
 
 def update_project(project_id, **fields):
     allowed = {
-        "name", "video_path", "video_size",
-        "duration", "status", "progress",
-        "message", "error", "settings"
+    "name",
+    "original_filename",
+    "video_path",
+    "video_size",
+    "duration",
+    "status",
+    "progress",
+    "message",
+    "error",
+    "settings"
     }
 
     updates = {
