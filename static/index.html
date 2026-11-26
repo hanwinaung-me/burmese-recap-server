@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burmese Recap Studio</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">BR</div>
+    <div>
+      <h1>Burmese Recap Studio</h1>
+      <p>AI Movie Recap Workspace</p>
+    </div>
+  </div>
+  <span id="serverStatus" class="status">Connecting...</span>
+</header>
+
+<main class="container">
+
+<section class="hero">
+  <h2>Movie Recap Studio</h2>
+  <p>Video တင်ပါ။ ဇာတ်လမ်းခွဲခြမ်းပါ။ မြန်မာ Recap ဖန်တီးပါ။</p>
+</section>
+
+<section class="panel">
+  <h3>01 · Create Project</h3>
+
+  <label>Project Name</label>
+  <input id="projectName" value="My Movie Recap">
+
+  <button id="createProject">Create Project</button>
+  <p id="createMessage" class="message"></p>
+</section>
+
+<section class="panel">
+  <h3>02 · Upload Video</h3>
+
+  <label>Select Video</label>
+  <input
+    type="file"
+    id="videoFile"
+    accept=".mp4,.mov,.mkv,.webm,.avi,.m4v"
+  >
+
+  <label class="check">
+    <input type="checkbox" id="rightsConfirmed">
+    I confirm I have permission or appropriate rights to process this video.
+  </label>
+
+  <button id="uploadVideo">Upload Video</button>
+  <p id="uploadMessage" class="message"></p>
+</section>
+
+<section class="panel">
+  <h3>03 · AI Story Analysis</h3>
+
+  <button id="analyzeVideo">Analyze Full Story</button>
+
+  <div class="progress">
+    <div id="progressBar"></div>
+  </div>
+
+  <p id="progressText">0%</p>
+  <p id="jobMessage" class="message"></p>
+</section>
+
+<section class="panel">
+  <h3>04 · Burmese Recap Script</h3>
+
+  <textarea
+    id="scriptEditor"
+    rows="14"
+    placeholder="AI generated Burmese narration will appear here..."
+  ></textarea>
+
+  <button id="loadScript" class="secondary">
+    Load Script
+  </button>
+
+  <button id="saveScript">
+    Save Script
+  </button>
+</section>
+
+<section class="panel">
+  <h3>05 · AI Voice</h3>
+
+  <p>Professional Burmese narration voice</p>
+
+  <button id="generateVoice">
+    Generate Voice
+  </button>
+
+  <p id="voiceMessage" class="message"></p>
+</section>
+
+<section class="panel">
+  <h3>06 · Subtitles</h3>
+
+  <p>Generate subtitles from approved narration.</p>
+
+  <button id="generateSubtitles">
+    Generate Subtitles
+  </button>
+
+  <p id="subtitleMessage" class="message"></p>
+</section>
+
+<section class="panel">
+  <h3>07 · Video Export</h3>
+
+  <label>Aspect Ratio</label>
+  <select id="aspectRatio">
+    <option value="16:9">16:9 YouTube</option>
+    <option value="9:16">9:16 Shorts</option>
+    <option value="1:1">1:1 Square</option>
+  </select>
+
+  <label>Resolution</label>
+  <select id="resolution">
+    <option value="720p">720p</option>
+    <option value="1080p">1080p</option>
+  </select>
+
+  <button id="renderVideo">
+    Export MP4
+  </button>
+
+  <p id="renderMessage" class="message"></p>
+
+  <a id="downloadLink" hidden>
+    Download Final Video
+  </a>
+</section>
+
+<section class="panel">
+  <h3>08 · Projects</h3>
+  <button id="refreshProjects" class="secondary">
+    Refresh Projects
+  </button>
+  <div id="projectList"></div>
+</section>
+
+</main>
+
+<footer>
+  Burmese Recap Studio · AI Video Production Workspace
+</footer>
+
+<script src="/static/app.js"></script>
+
+</body>
+    </html>
