@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: burmese-recap-studio
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
